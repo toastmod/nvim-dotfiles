@@ -38,7 +38,15 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use { "ellisonleao/gruvbox.nvim" }
-  vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+  
+  use {
+    'saecki/crates.nvim',
+    tag = 'v0.3.0',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+        require('crates').setup()
+    end,
+  }
 
   use {
 	  "nvim-neo-tree/neo-tree.nvim",
@@ -49,7 +57,10 @@ return packer.startup(function(use)
 		  "MunifTanjim/nui.nvim",
 	  }
   }
-
+  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+  use("petertriho/nvim-scrollbar")
+  use 'simrat39/rust-tools.nvim'
+  vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
