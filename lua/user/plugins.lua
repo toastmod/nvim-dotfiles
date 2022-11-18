@@ -57,9 +57,16 @@ return packer.startup(function(use)
 		  "MunifTanjim/nui.nvim",
 	  }
   }
+
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+  end,
+  }
+
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use("petertriho/nvim-scrollbar")
   use 'simrat39/rust-tools.nvim'
+  use 'mfussenegger/nvim-dap'
   vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
