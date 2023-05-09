@@ -6,6 +6,7 @@ if exists("g:neovide")
     let g:neovide_cursor_animation_length=0.03
     let g:neovide_cursor_vfx_mode = "pixiedust"
     let g:neovide_transparency = 0.95
-    set guifont=JetBrains\ Mono:h10
+    set guifont=Fira_Code:h11
 endif
 "]])
+

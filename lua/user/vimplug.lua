@@ -9,6 +9,8 @@ Plug 'projekt0n/github-nvim-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
+
 "
 ]])
